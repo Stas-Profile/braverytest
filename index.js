@@ -15,7 +15,7 @@ console.log(coolImages.one());
 
 console.log(randomCategory())
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 3000; i++) {
     const name = random.first();
     const phone = randomMobile();
     const email = randomEmail();
@@ -44,9 +44,13 @@ for (let i = 0; i < 1000; i++) {
                 `${image}`,
                 `${image}`
             ]
-        }).then(res => console.log(`profileId = ${res.data.profileId}`)).catch(
+        }).catch(
             e => console.log('ERRORERRORERRORERRORERRORERRORERROR'
             , e))
+            .then(res => {
+            console.log(`profileId = ${res.data.profileId}`)
+            axios.post(`http://127.0.0.1:3000/card/${res.data.profileId}`)
+        }).catch(e => console.log(e))
     }).catch(
         e => console.log('ERRORERRORERRORERRORERRORERRORERROR'
         , e))
