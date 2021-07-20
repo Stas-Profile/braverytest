@@ -1,0 +1,20 @@
+{
+  "name": "braverytest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cool-images": "^1.0.3",
+    "random-email": "^1.0.3",
+    "random-mobile": "^1.0.2",
+    "random-name": "^0.1.2"
+  }
+}
